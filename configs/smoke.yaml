@@ -1,0 +1,29 @@
+# Fast end-to-end config used by `make all` (tiny synthetic COCO-format dataset).
+seed: 1337
+device: cpu
+
+data:
+  coco_root: data/smoke_coco
+  train_ann: annotations/instances_train.json
+  val_ann: annotations/instances_val.json
+  num_workers: 0
+
+model:
+  num_classes: 3  # background + 2 categories in smoke dataset
+  mc_dropout_p: 0.1
+
+train:
+  batch_size: 1
+  lr: 0.0005
+  weight_decay: 0.0001
+  max_steps: 2
+  amp: false
+  grad_clip_norm: 1.0
+
+selftrain:
+  use_strong_weak_consistency: true
+  pseudo_loss_weight: 1.0
+
+eval:
+  max_images: 8
+

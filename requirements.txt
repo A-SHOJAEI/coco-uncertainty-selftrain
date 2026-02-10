@@ -1,0 +1,14 @@
+# Pinned for Python 3.12 on Ubuntu; adjust torch index URL in Makefile if you want CUDA wheels.
+numpy==1.26.4
+pillow==10.4.0
+pyyaml==6.0.2
+requests==2.32.3
+tqdm==4.66.5
+
+# ML stack
+torch==2.5.1
+torchvision==0.20.1
+
+# COCO evaluation + mask utilities
+pycocotools==2.0.8
+

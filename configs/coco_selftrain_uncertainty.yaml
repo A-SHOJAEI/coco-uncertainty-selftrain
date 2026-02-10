@@ -1,0 +1,30 @@
+# Full COCO self-training config (teacher->pseudo labels->student).
+seed: 1337
+device: cuda
+
+data:
+  coco_root: data/coco
+  train_ann: annotations/instances_train2017.json
+  val_ann: annotations/instances_val2017.json
+  num_workers: 4
+
+model:
+  num_classes: 81
+  # Add dropout so MC-dropout variance is available as an uncertainty signal.
+  mc_dropout_p: 0.1
+
+train:
+  batch_size: 2
+  lr: 0.005
+  weight_decay: 0.0001
+  max_steps: 90000
+  amp: true
+  grad_clip_norm: 1.0
+
+selftrain:
+  use_strong_weak_consistency: true
+  pseudo_loss_weight: 1.0
+
+eval:
+  max_images: 5000
+

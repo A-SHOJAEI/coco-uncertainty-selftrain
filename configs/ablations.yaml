@@ -1,0 +1,51 @@
+# Ablation suite matching the project plan (signal swap, filtering, consistency).
+# Run with:
+#   .venv/bin/python run_ablations.py --suite configs/ablations.yaml --config configs/coco_selftrain_uncertainty.yaml ...
+variants:
+  - name: no_uncertainty_weighting
+    uncertainty: entropy
+    filter: fixed_thresh
+    score_thresh: 0.5
+    mc_dropout: 0
+    no_uncertainty_weighting: true
+
+  - name: uncertainty_signal_margin
+    uncertainty: margin
+    filter: fixed_thresh
+    score_thresh: 0.5
+    mc_dropout: 0
+
+  - name: uncertainty_signal_mask_mean_conf
+    uncertainty: mask_mean_conf
+    filter: fixed_thresh
+    score_thresh: 0.5
+    mc_dropout: 0
+
+  - name: uncertainty_signal_mc_dropout_var
+    uncertainty: mc_dropout_var
+    filter: fixed_thresh
+    score_thresh: 0.5
+    mc_dropout: 3
+
+  - name: filtering_adaptive_class
+    uncertainty: entropy
+    filter: adaptive_class
+    score_thresh: 0.5
+    adaptive_keep: 0.2
+    mc_dropout: 0
+
+  - name: filtering_topk_per_image
+    uncertainty: entropy
+    filter: topk_per_image
+    topk: 20
+    score_thresh: 0.0
+    mc_dropout: 0
+
+  - name: no_strong_weak_consistency
+    # Pseudo-only training with a single augmentation pipeline.
+    uncertainty: entropy
+    filter: fixed_thresh
+    score_thresh: 0.5
+    mc_dropout: 0
+    no_consistency: true
+
