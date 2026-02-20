@@ -1,0 +1,112 @@
+{
+  "runs": [
+    {
+      "meta": {
+        "config": "configs/smoke.yaml",
+        "cuda_available": true,
+        "cuda_version": "12.4",
+        "evaluated_at": "2026-02-20 01:10:11",
+        "git_head": "b2ac8fdb2115be63768d21c031d631f71da9f7fb",
+        "max_images": 8,
+        "platform": "Linux-6.17.0-14-generic-x86_64-with-glibc2.39",
+        "python": "3.12.3",
+        "split": "val",
+        "torch": "2.5.1+cu124",
+        "torchvision": "0.20.1+cu124",
+        "weights": "outputs/baseline/model.pt"
+      },
+      "metrics": {
+        "bbox": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": -1.0,
+          "APm": 0.0,
+          "APs": 0.0
+        },
+        "segm": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": -1.0,
+          "APm": 0.0,
+          "APs": 0.0
+        }
+      },
+      "notes": "",
+      "run_dir": "outputs/baseline"
+    },
+    {
+      "meta": {
+        "config": "configs/smoke.yaml",
+        "cuda_available": true,
+        "cuda_version": "12.4",
+        "evaluated_at": "2026-02-20 01:11:17",
+        "git_head": "b2ac8fdb2115be63768d21c031d631f71da9f7fb",
+        "max_images": 8,
+        "platform": "Linux-6.17.0-14-generic-x86_64-with-glibc2.39",
+        "python": "3.12.3",
+        "split": "val",
+        "torch": "2.5.1+cu124",
+        "torchvision": "0.20.1+cu124",
+        "weights": "outputs/selftrain_entropy/model.pt"
+      },
+      "metrics": {
+        "bbox": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": -1.0,
+          "APm": 0.0,
+          "APs": 0.0
+        },
+        "segm": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": -1.0,
+          "APm": 0.0,
+          "APs": 0.0
+        }
+      },
+      "notes": "",
+      "run_dir": "outputs/selftrain_entropy"
+    },
+    {
+      "meta": {
+        "config": "configs/smoke.yaml",
+        "cuda_available": true,
+        "cuda_version": "12.4",
+        "evaluated_at": "2026-02-20 01:12:11",
+        "git_head": "b2ac8fdb2115be63768d21c031d631f71da9f7fb",
+        "max_images": 8,
+        "platform": "Linux-6.17.0-14-generic-x86_64-with-glibc2.39",
+        "python": "3.12.3",
+        "split": "val",
+        "torch": "2.5.1+cu124",
+        "torchvision": "0.20.1+cu124",
+        "weights": "outputs/ablation_no_weight/model.pt"
+      },
+      "metrics": {
+        "bbox": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": -1.0,
+          "APm": 0.0,
+          "APs": 0.0
+        },
+        "segm": {
+          "AP": 0.0,
+          "AP50": 0.0,
+          "AP75": 0.0,
+          "APl": -1.0,
+          "APm": 0.0,
+          "APs": 0.0
+        }
+      },
+      "notes": "",
+      "run_dir": "outputs/ablation_no_weight"
+    }
+  ]
+}
